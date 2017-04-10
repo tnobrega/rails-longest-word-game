@@ -1,0 +1,11 @@
+<div class="text-center col-xs-4 col-xs-offset-4">
+  <h1 class="h1">Game</h1>
+  <form action="/score" class="form-group">
+  <label for="grid"><%= @grid %></label>
+  <input type="text" name="word" placeholder="Type a word only with letters above" class="form-control">
+  <input type="hidden" name="grid" value='<%= @grid %>'>
+  <input type="hidden" name="start_time" value=<%= @start_time %>>
+  <input type="submit" value="Go on!" class="btn btn-primary top">
+</form>
+<h4 class="h4">Attempts: <%= @attempts %></h3>
+</div>
