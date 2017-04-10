@@ -5,9 +5,5 @@
   <h2 class="h2">Score: <%= @result[:score] %></h2>
   <h3 class="h3"><%= @result[:message] %></h3>
   <h3 class="h3">Translation: <%= @result[:translation] %></h3>
+  <%= link_to "Ask a new question", game_path %>
 </div>
-
-<table>
- <tr><td>User Name:</td><td><%= @user_name %></td></tr>
- <tr><td>Customer Number:</td><td><%= @customer_number %></td></tr>
-</table>

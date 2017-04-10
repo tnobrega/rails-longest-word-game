@@ -16,6 +16,7 @@ class GameController < ApplicationController
     start_time = params[:start_time].to_f
     end_time = Time.now.to_f
     @result = run_game(word, letters, start_time, end_time)
+    cookies[:attempts] = cookies[:attempts].to_i + 1
   end
 
   private
@@ -45,7 +46,6 @@ class GameController < ApplicationController
         score: (attempt.size * 50) - (end_time - start_time).to_i,
         message: "well done" }
     end
-    cookies[:attempts] = cookies[:attempts].to_i + 1
   end
 
   def translator(w)
